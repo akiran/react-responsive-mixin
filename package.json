@@ -1,0 +1,28 @@
+{
+  "name": "react-responsive-mixin",
+  "version": "0.1.0",
+  "description": "Mixin to develop responsive react components",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akiran/react-responsive-mixin"
+  },
+  "keywords": [
+    "react",
+    "media-query",
+    "responsive"
+  ],
+  "author": "Kiran Abburi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akiran/react-responsive-mixin/issues"
+  },
+  "homepage": "https://github.com/akiran/react-responsive-mixin",
+  "dependencies": {
+    "enquire.js": "^2.1.1",
+    "json2mq": "^0.1.0"
+  }
+}
