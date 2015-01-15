@@ -1,17 +1,20 @@
 # react-responsive-mixin
 
 react-responsive-mixin makes building responsive components easy
-This mixin adds method to the react component called media()
+This mixin adds method to the react component called media().
+This is a wrapper around [enquire.js](http://wicky.nillia.ms/enquire.js/)
 
 ### Usage
 ```javascript
 this.media(query, handler)
 ```
 ##### `query`
-query can be either a string or object
+query is a media query definition in either string or object format.
+this mixin internally uses [json2mq](https://github.com/akiran/json2mq) to convert media query from object to string format.
 
 ##### `handler`
-handler can be either a function or object
+handler is a function that needs to be executed when media query matches. 
+handler can also be an object according to [enquire.js](http://wicky.nillia.ms/enquire.js/#api) API
 
 ##### Example
 
