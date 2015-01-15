@@ -1,7 +1,7 @@
 # react-responsive-mixin
 
-react-responsive-mixin makes building responsive components easy
-This mixin adds method to the react component called media().
+> react-responsive-mixin makes building responsive components easy
+This mixin adds method called `media()` to the react component.
 This is a wrapper around [enquire.js](http://wicky.nillia.ms/enquire.js/)
 
 ### Usage
