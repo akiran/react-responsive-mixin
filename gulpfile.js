@@ -7,6 +7,9 @@ var WebpackDevServer = require('webpack-dev-server');
 gulp.task('copy', function () {
   gulp.src('./docs/index.html')
     .pipe(gulp.dest('build'));
+
+  return gulp.src('./docs/img/*')
+    .pipe(gulp.dest('build/img'));
 });
 
 gulp.task('sass', function () {
@@ -26,7 +29,7 @@ gulp.task('server', ['copy', 'sass'], function (callback) {
     contentBase: './build',
     hot: true,
     debug: true
-  }).listen(8000, 'localhost', function (err, result) {
+  }).listen(8000, process.env.HOST_IP || 'localhost', function (err, result) {
     
   });
 });

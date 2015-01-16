@@ -11,7 +11,7 @@ this.media(query, handler)
 ```
 ##### `query`
 query is a media query definition either in string or object format.
-this mixin internally uses [json2mq](https://github.com/akiran/json2mq) to convert media query from object to string format.
+This mixin internally uses [json2mq](https://github.com/akiran/json2mq) to convert media query from object to string format.
 
 ##### `handler`
 handler is a function that needs to be executed when media query matches. 
@@ -26,21 +26,21 @@ var ResponsiveMixin = require('react-responsive-mixin');
 var Component = React.createClass({
   mixins: [ResponsiveMixin],
   getInitialState: function () {
-    return { device: 'small' };
-  }
+    return { url: '/img/large.img' };
+  },
   componentDidMount: function () {
     this.media({maxWidth: 600}, function () {
-      this.setState({device: 'small'});
+      this.setState({url: '/img/small.jpg'});
     }.bind(this));
-    this.media({minWidth:600, maxWidth: 1024}, function () {
-      this.setState({device: 'medium'});
+    this.media({minWidth:601, maxWidth: 1024}, function () {
+      this.setState({url: '/img/medium.jpg'});
     }.bind(this));
-    this.media({minWidth: 1024}, function () {
-      this.setState({device: 'large'});
+    this.media({minWidth: 1025}, function () {
+      this.setState({url: '/img/large.jpg'});
     }.bind(this));
-  }
+  },
   render: function () {
-    return <div>{this.state.device} </div>
+    return <img src={this.state.url} />;
   }
 });
 

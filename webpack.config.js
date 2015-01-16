@@ -19,7 +19,7 @@ module.exports = {
       //   loader: "style!css!postcss!sass?outputStyle=expanded&includePaths[]=" + 
       //       (path.resolve(__dirname, './node_modules')) + "&includePaths[]=" + (path.resolve(__dirname, './bower_components'))
       // },
-      // { test: /\.md$/, loader: "html!markdown" },
+      { test: /\.md$/, loader: "html!markdown" },
     ],
   },
   // postcss: [ autoprefixer({ browsers: ['last 2 version'] }) ],
