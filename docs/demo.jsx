@@ -1,20 +1,25 @@
 var React = require('react');
 var ResponsiveMixin = require('../');
 
+var baseUrl = '';
+if (process.env.NODE_ENV === 'production') {
+  baseUrl = 'http://static.webrafter.com';
+}
+
 var Component = React.createClass({
   mixins: [ResponsiveMixin],
   getInitialState: function () {
-    return { url: '/img/large.img' };
+    return { url: baseUrl + '/img/large.img' };
   },
   componentDidMount: function () {
     this.media({maxWidth: 640}, function () {
-      this.setState({url: '/img/small.jpg'});
+      this.setState({url: baseUrl + '/img/small.jpg'});
     }.bind(this));
     this.media({minWidth:641, maxWidth: 1200}, function () {
-      this.setState({url: '/img/medium.jpg'});
+      this.setState({url: baseUrl + '/img/medium.jpg'});
     }.bind(this));
     this.media({minWidth: 1201}, function () {
-      this.setState({url: '/img/large.jpg'});
+      this.setState({url: baseUrl + '/img/large.jpg'});
     }.bind(this));
   },
   render: function () {

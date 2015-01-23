@@ -1,6 +1,6 @@
 {
   "name": "react-responsive-mixin",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Mixin to develop responsive react components",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,8 @@
   "keywords": [
     "react",
     "media-query",
-    "responsive"
+    "responsive",
+    "react-component"
   ],
   "author": "Kiran Abburi",
   "license": "MIT",
@@ -37,5 +38,10 @@
     "react-highlight": "^0.3.0",
     "webpack": "^1.4.15",
     "webpack-dev-server": "^1.7.0"
+  },
+  "browserify": {
+    "transform": [
+      ["reactify", {"es6": true}]
+    ]
   }
 }
