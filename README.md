@@ -5,6 +5,8 @@
 This mixin adds method called `media()` to the react component.
 This is a wrapper around [enquire.js](http://wicky.nillia.ms/enquire.js/)
 
+### [Demo](http://webrafter.com/opensource/react-responsive-mixin)
+
 ### Usage
 ```javascript
 this.media(query, handler)
