@@ -1,4 +1,5 @@
-var enquire = require('enquire.js');
+var canUseDOM = require('can-use-dom');
+var enquire = canUseDOM && require('enquire.js');
 var json2mq = require('json2mq');
 
 var ResponsiveMixin = {
@@ -20,7 +21,7 @@ var ResponsiveMixin = {
   componentWillUnmount: function () {
     this._responsiveMediaHandlers.forEach(function(obj) {
       enquire.unregister(obj.query, obj.handler);
-    })
+    });
   }
 };
 
