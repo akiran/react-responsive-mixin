@@ -1,6 +1,7 @@
 var React = require('react');
 var Demo = require('./demo');
 var Highlight = require('react-highlight');
+var ExecutionEnvironment = require('react/lib/ExecutionEnvironment');
 
 var Docs = React.createClass({
   render: function () {
@@ -20,6 +21,12 @@ var Docs = React.createClass({
   }
 });
 
-React.render(<Docs />, document.body);
+if (ExecutionEnvironment.canUseDOM) {
+  document.addEventListener('DOMContentLoaded', function () {
+    React.render(<Docs />, document.body);
+  });
+} 
+
+module.exports = Docs;
 
 
