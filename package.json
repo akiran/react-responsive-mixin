@@ -1,6 +1,6 @@
 {
   "name": "react-responsive-mixin",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Mixin to develop responsive react components",
   "main": "index.js",
   "scripts": {
