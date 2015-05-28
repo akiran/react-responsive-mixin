@@ -1,6 +1,6 @@
 {
   "name": "react-responsive-mixin",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Mixin to develop responsive react components",
   "main": "index.js",
   "scripts": {
@@ -40,15 +40,5 @@
     "react-highlight": "^0.3.0",
     "webpack": "^1.4.15",
     "webpack-dev-server": "^1.7.0"
-  },
-  "browserify": {
-    "transform": [
-      [
-        "reactify",
-        {
-          "es6": true
-        }
-      ]
-    ]
   }
 }
