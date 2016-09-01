@@ -1,5 +1,5 @@
 var canUseDOM = require('can-use-dom');
-var enquire = require('enquire.js');
+var enquire = canUseDOM && require('enquire.js');
 var json2mq = require('json2mq');
 
 var ResponsiveMixin = {
