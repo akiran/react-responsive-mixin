@@ -1,5 +1,5 @@
 var canUseDOM = require('can-use-dom');
-var enquire = canUseDOM && require('enquire.js');
+var enquire = require('enquire.js');
 var json2mq = require('json2mq');
 
 var ResponsiveMixin = {
@@ -10,7 +10,7 @@ var ResponsiveMixin = {
         match: handler
       };
     }
-    enquire.register(query, handler);
+    canUseDOM && enquire.register(query, handler);
 
     // Queue the handlers to unregister them at unmount  
     if (! this._responsiveMediaHandlers) {
@@ -21,7 +21,7 @@ var ResponsiveMixin = {
   componentWillUnmount: function () {
     if (this._responsiveMediaHandlers) {
       this._responsiveMediaHandlers.forEach(function(obj) {
-        enquire.unregister(obj.query, obj.handler);
+        canUseDOM && enquire.unregister(obj.query, obj.handler);
       });
     }
   }
